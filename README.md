@@ -63,9 +63,10 @@ The barebones of a homebrew app using the m3diaLib would look like this:
 
 int main() {
     m3d::Applet app;
+    m3d::Input input;
 
     while (app.isRunning()) {
-        if (m3d::buttons::buttonPressed(m3d::buttons::Button::Start)) {
+        if (input.buttonPressed(input.Start)) {
             app.exit(); // exit if start is pressed
         }
     }
